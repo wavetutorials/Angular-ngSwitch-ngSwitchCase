@@ -1,0 +1,28 @@
+<div class="toolbar"><img width="40" alt="Angular Logo" src="assets/angular.svg" />
+  <span>Angular Tutorials</span>
+  <div class="spacer"></div>
+  <h3>Wave Tutorials</h3>
+  <div class="spacer"></div>
+</div>
+<div class="header">{{title}}</div>
+<hr />
+
+<div class="content">
+<div>
+  <input name='setName' type="radio" (click)="SetName(1)">One
+  <input name='setName' type="radio" (click)="SetName(2)">Two
+  <input name='setName' type="radio" (click)="SetName(3)">Three
+  <input name='setName' type="radio" (click)="SetName(null)">Other
+</div>
+<br/>
+<br/>
+<div [ngSwitch]="name">
+  <div *ngSwitchCase="'One'">You select One</div>
+  <div *ngSwitchCase="'Two'">You select Two</div>
+  <div *ngSwitchCase="'Three'">You select Three</div>
+  <div *ngSwitchDefault>Invalid Inputs</div>
+</div>
+
+</div>
+
+<router-outlet></router-outlet>
